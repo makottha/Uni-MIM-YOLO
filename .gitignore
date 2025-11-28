@@ -4,3 +4,13 @@
 /data/visdrone/VisDrone2019-DET-train/images/
 /data/visdrone/VisDrone2019-DET-val/annotations/
 /data/visdrone/VisDrone2019-DET-val/images/
+/data/coco/annotations/
+/data/coco/images/
+/data/coco/labels_yolo/train2017/
+/data/coco_splits/1_percent/
+/data/coco_splits/5_percent/
+/data/coco_splits/10_percent/
+/data/visdrone/VisDrone2019-DET-train/annotations/
+/data/visdrone/VisDrone2019-DET-train/images/
+/data/visdrone/VisDrone2019-DET-val/annotations/
+/data/visdrone/VisDrone2019-DET-val/images/

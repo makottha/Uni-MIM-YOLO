@@ -9,15 +9,16 @@ class ModelEMA:
     """
 
     def __init__(self, model, decay=0.999):
-        self.ema = deepcopy(model).eval()  # Teacher is always in Eval mode
+        # Create a deep copy of the model for the Teacher
+        self.ema = deepcopy(model).eval()
         self.decay = decay
 
-        # Detach parameters to prevent gradient flow
+        # Detach parameters so gradients strictly flow to Student, never Teacher
         for p in self.ema.parameters():
             p.requires_grad_(False)
 
     def update(self, model):
-        # theta_t = alpha * theta_t + (1 - alpha) * theta_s
+        # Formula: theta_t = decay * theta_t + (1 - decay) * theta_s
         with torch.no_grad():
             msd = model.state_dict()
             for k, v in self.ema.state_dict().items():
