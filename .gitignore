@@ -1,0 +1,6 @@
+/data/coco/images/
+/data/coco/annotations/
+/data/visdrone/VisDrone2019-DET-train/annotations/
+/data/visdrone/VisDrone2019-DET-train/images/
+/data/visdrone/VisDrone2019-DET-val/annotations/
+/data/visdrone/VisDrone2019-DET-val/images/
